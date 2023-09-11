@@ -1,15 +1,16 @@
 #include<iostream>
 #include<string>
+#include<iomanip>
 using namespace std ;
 float update_balance (int command, float dollars, float balance);
 int main()
 {
 	char command ;
-	float dollars,balance = 10000 ;
+	float dollars,balance = 10000.00 ;
 	cout << "Exit with 0 \n" ; 
 	do
 	{
-		cout << "Your balance = " << balance << endl ;
+		cout << "Your balance = " << fixed << setpricision(2) << balance << endl ;
 		cout << "Input command (1 or withdraw ,2 or deposit) : " ;
 		cin  >> command ;
 		if(command == '0')
